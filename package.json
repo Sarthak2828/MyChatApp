@@ -1,0 +1,21 @@
+{
+  "name": "MyChatApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix Backend && npm install --prefix Frontend && npm run build --prefix Frontend",
+    "start": "npm run start --prefix Backend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd Backend && nodemon server.js",
+    "client": "cd Frontend && npm start"
+  },
+  "keywords": [],
+  "author": "Sarthak Gaba",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
+
+
